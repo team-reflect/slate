@@ -180,7 +180,13 @@ export const Editable = (props: EditableProps) => {
     const el = ReactEditor.toDOMNode(editor, editor)
     state.isUpdatingSelection = true
 
-    const newDomRange = selection && ReactEditor.toDOMRange(editor, selection)
+    let newDomRange: DOMRange | null = null
+
+    try {
+      newDomRange = selection && ReactEditor.toDOMRange(editor, selection)
+    } catch (err) {
+      // Invalid selection
+    }
 
     if (newDomRange) {
       if (Range.isBackward(selection!)) {
