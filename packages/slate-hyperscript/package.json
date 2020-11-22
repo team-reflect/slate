@@ -1,5 +1,5 @@
 {
-  "name": "slate-hyperscript",
+  "name": "@maccman/slate-hyperscript",
   "description": "A hyperscript helper for creating Slate documents.",
   "version": "0.59.1-alpha.0",
   "license": "MIT",
@@ -34,5 +34,6 @@
     "serialize",
     "slate",
     "xml"
-  ]
+  ],
+  "gitHead": "c396eedd6882ef73f69df8bd0cacacdf763a5b21"
 }
